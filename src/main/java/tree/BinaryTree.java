@@ -191,9 +191,10 @@ public class BinaryTree {
 
 			//暂存前驱节点
 			TreeNode<T> preNode = null;
-			//是否不存在右节点
-			boolean tag = true;
-			while(!stack.empty() && tag){
+			//是否是从右子树回来
+			//只有从右子树回来的，才能出栈
+			boolean tag = false;
+			while(!stack.empty() && !tag){
 				TreeNode<T> treeNode = stack.peek();
 				//
 				if(treeNode.getRight() == preNode ){
@@ -214,7 +215,7 @@ public class BinaryTree {
 
 				}else {
 					p = treeNode.getRight();
-					tag = false;
+					tag = true;
 				}
 			}
 
