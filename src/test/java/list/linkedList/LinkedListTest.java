@@ -2,6 +2,7 @@ package list.linkedList;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import static org.junit.Assert.*;
